@@ -131,12 +131,18 @@ route.get('/api/all', getAllTasks);
 route.post('/api/delete/:id', deleteTask);
 route.post('/api/update/:id', updateTask);
 
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+
+})
+
 
 /**
  * @param req
  * @param res
  */
-const  API_GET_ALL = "http://localhost:3000/api/all"
+const  API_GET_ALL = "http://hainguyen11.herokuapp.com/api/all"
 const axios = require('axios')
 homeRoute = (req, res) => {
     // gọi đến 1 api request get all tasks
